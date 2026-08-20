@@ -8,26 +8,14 @@ export const HealthierCommunitySection: React.FC = () => {
     <section className="py-20 bg-white overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Mother & Daughter framed photo with 3D feet pop-out effect (matching Reference Image 3) */}
+          {/* Left Column: Mother & Daughter framed photo with 3D feet pop-out effect (matching Reference Image 2) */}
           <div className="lg:col-span-6 relative flex justify-center">
-            <div className="relative w-full max-w-md">
-              {/* Outer Magenta Border Box Frame */}
-              <div className="relative border-4 border-[#C2185B] rounded-2xl p-2 bg-white shadow-2xl">
-                <div className="aspect-[4/3] rounded-xl overflow-hidden relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1000&q=80"
-                    alt="Mother and daughter sitting together in window comfort"
-                    className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-              </div>
-
-              {/* 3D Pop-Out Feet Accent (simulated 3D overlay breaking the frame boundary) */}
-              <div className="absolute -bottom-6 -left-4 z-20 pointer-events-none hidden sm:block">
-                <div className="bg-[#C2185B]/10 backdrop-blur-sm border border-[#C2185B]/30 rounded-full px-4 py-1 text-[11px] font-bold text-[#C2185B] shadow-md">
-                  ✨ Real Comfort for Every Generation
-                </div>
-              </div>
+            <div className="relative w-full max-w-lg">
+              <img
+                src="/images/mother-daughter.png"
+                alt="Mother and daughter sitting together in window frame"
+                className="w-full h-auto object-contain drop-shadow-2xl transform hover:scale-103 transition-transform duration-500"
+              />
             </div>
           </div>
 
@@ -38,7 +26,7 @@ export const HealthierCommunitySection: React.FC = () => {
             </h2>
 
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-light">
-              Makeasy is a women hygiene and healthcare brand. Makeasy was established with the desire to revolutionize the way women view hygiene and period wellness. We stand for every woman’s right to comfort, safety, and dignity. We work with a team of dedicated individuals who work day in and day out to ease your struggle for hygiene. We strive to come up with innovative products and upgrade the standard and quality of existing products.
+              Makeasy is a women hygiene and healthcare brand. Makeasy was established with the desire to revolutionize the way women view toilets. We stand for every woman’s right to stand and pee. We work with a team of dedicated individuals who work day in and day out to ease your struggle for hygiene. We strive to come up with innovative products and upgrade the standard and quality of existing products.
             </p>
 
             <div className="pt-2">

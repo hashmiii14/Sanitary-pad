@@ -7,7 +7,7 @@ export const ProductShowcaseSection: React.FC = () => {
 
   return (
     <section className="py-20 bg-[#F6F0FA] relative overflow-hidden">
-      {/* Decorative Lotus Flower Art on Bottom Right (matching Reference Image 3) */}
+      {/* Decorative Lotus Flower Art on Bottom Right (matching Reference Image 2) */}
       <div className="absolute right-[-40px] bottom-[-40px] pointer-events-none opacity-80 w-80 h-80 z-0">
         <svg viewBox="0 0 200 200" className="w-full h-full text-pink-300">
           <path
@@ -31,19 +31,18 @@ export const ProductShowcaseSection: React.FC = () => {
           </h2>
         </div>
 
-        {/* 2-Column Wide Product Cards (matching Reference Image 3) */}
+        {/* 2-Column Wide Product Cards with Exact Reference Images (matching Reference Image 2) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Card 1: PeeDevice */}
           <div className="bg-white rounded-3xl p-8 shadow-xl border border-purple-100 flex flex-col justify-between transform hover:-translate-y-2 transition-all duration-300 group">
             <div className="space-y-6">
-              {/* Product Visual Mockup */}
-              <div className="aspect-[16/9] rounded-2xl bg-gradient-to-br from-pink-500 via-purple-600 to-purple-900 p-6 flex items-center justify-center relative overflow-hidden shadow-md">
-                <div className="text-center text-white space-y-2">
-                  <span className="font-script text-3xl block">Ha Pee</span>
-                  <span className="text-[10px] tracking-widest uppercase font-bold bg-white/20 px-3 py-1 rounded-full inline-block">
-                    Stand & Pee Urination Device
-                  </span>
-                </div>
+              {/* Reference Product Card Image */}
+              <div className="rounded-2xl overflow-hidden flex items-center justify-center p-2">
+                <img
+                  src="/images/card-pee-device.png"
+                  alt="Makeasy PeeDevice Product Packaging Render"
+                  className="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
 
               <div className="space-y-2">
@@ -70,14 +69,13 @@ export const ProductShowcaseSection: React.FC = () => {
           {/* Card 2: Sanitary Napkin */}
           <div className="bg-white rounded-3xl p-8 shadow-xl border border-purple-100 flex flex-col justify-between transform hover:-translate-y-2 transition-all duration-300 group">
             <div className="space-y-6">
-              {/* Product Visual Mockup */}
-              <div className="aspect-[16/9] rounded-2xl bg-gradient-to-br from-purple-700 via-pink-600 to-rose-500 p-6 flex items-center justify-center relative overflow-hidden shadow-md">
-                <div className="text-center text-white space-y-2">
-                  <span className="font-script text-3xl block">Makeasy</span>
-                  <span className="text-[10px] tracking-widest uppercase font-bold bg-emerald-500 text-white px-3 py-1 rounded-full inline-block">
-                    100% Cotton XL+ 7 Pads
-                  </span>
-                </div>
+              {/* Reference Product Card Image */}
+              <div className="rounded-2xl overflow-hidden flex items-center justify-center p-2">
+                <img
+                  src="/images/card-sanitary-napkin.png"
+                  alt="Makeasy Sanitary Napkin Product Packaging Render"
+                  className="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
 
               <div className="space-y-2">
