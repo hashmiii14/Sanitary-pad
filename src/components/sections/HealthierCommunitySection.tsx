@@ -2,7 +2,7 @@ import React from 'react';
 import { useCart } from '../../context/CartContext';
 
 export const HealthierCommunitySection: React.FC = () => {
-  const { setCurrentView } = useCart();
+  const { openInfoModal } = useCart();
 
   return (
     <section className="py-20 bg-white overflow-hidden relative">
@@ -31,7 +31,7 @@ export const HealthierCommunitySection: React.FC = () => {
 
             <div className="pt-2">
               <button
-                onClick={() => setCurrentView('about')}
+                onClick={() => openInfoModal('community-read-more')}
                 className="bg-[#6B1186] hover:bg-[#54096B] text-white rounded-full px-8 py-2.5 text-sm font-semibold transition-all duration-300 shadow-md transform hover:scale-105"
               >
                 Read More

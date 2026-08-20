@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
             >
               <span className="font-script text-4xl text-white block">Makeasy</span>
               <span className="text-[10px] tracking-widest uppercase font-montserrat text-pink-300 block">
-                LUNA Period Care & Hygiene
+                Women Hygiene & Healthcare
               </span>
             </button>
 
@@ -104,7 +104,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Copyright Line */}
         <div className="border-t border-purple-900/60 pt-6 text-center text-[11px] text-purple-300/70 font-light flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p>© {new Date().getFullYear()} Makeasy LUNA Period Care. All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} Makeasy Women Hygiene & Healthcare. All Rights Reserved.</p>
           <p>Designed with ❤️ for Women Hygiene & Care</p>
         </div>
       </div>

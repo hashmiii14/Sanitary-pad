@@ -21,7 +21,12 @@ export const BenefitsSection: React.FC = () => {
     {
       icon: <RefreshCw className="w-6 h-6 text-amber-500" />,
       title: '98% Plastic-Free & Eco-Conscious',
-      desc: 'Plastics take 500 years to decompose. Luna replaces synthetic touch points with biodegradable plant fibers and recyclable wrappers.'
+      desc: 'Plastics take 500 years to decompose. Makeasy replaces synthetic touch points with biodegradable plant fibers and recyclable wrappers.'
+    },
+    {
+      icon: <CheckCircle2 className="w-6 h-6 text-[#C2185B]" />,
+      title: 'Zero Chemical Rash',
+      desc: 'Formulated without elemental chlorine bleach, synthetic dyes, or perfumes.'
     }
   ];
 
@@ -37,7 +42,7 @@ export const BenefitsSection: React.FC = () => {
             </span>
 
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-plum leading-tight">
-              Why 50,000+ Women Trust Luna Every Month
+              Why 50,000+ Women Trust Makeasy Every Month
             </h2>
 
             <p className="text-sm md:text-base text-charcoal-muted leading-relaxed">

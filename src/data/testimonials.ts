@@ -1,63 +1,43 @@
-import { Testimonial } from '../types';
+export interface Testimonial {
+  id: string;
+  name: string;
+  role: string;
+  location: string;
+  avatar: string;
+  comment: string;
+  rating: number;
+  productName: string;
+}
 
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 't1',
-    name: 'Sophia Chen',
-    role: 'Yoga Instructor',
-    location: 'San Francisco, CA',
-    comment: 'Switching to Luna was a revelation. I used to get skin irritation from store brands, but Luna Daily feels like cloud soft cotton. Zero leaks during my 90-minute hot yoga classes!',
+    name: 'Pooja Kapoor',
+    role: 'Software Engineer',
+    location: 'Faridabad, India',
+    avatar: '/images/avatar-pooja.jpg',
+    comment: 'I am a frequent traveller, who encounters the problem of unhygienic toilets everywhere right from Railways to Airports and from Offices to Multiplexes. Makeasy Pee Devices is a great solution to this problem highly recommended for working women.',
     rating: 5,
-    productName: 'Luna Daily Organic',
-    verifiedPurchase: true,
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80'
+    productName: 'Makeasy HaPee PeeDevice'
   },
   {
     id: 't2',
-    name: 'Elena Rostova',
-    role: 'Architect & Marathon Runner',
-    location: 'Chicago, IL',
-    comment: 'The Ultra Night Wings pad is unbelievable. For the first time in years, I woke up with zero leaks on my bedsheets on day 2. The flared back design is genius.',
+    name: 'Ananya Sharma',
+    role: 'Marketing Manager & Fitness Enthusiast',
+    location: 'New Delhi, India',
+    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80',
+    comment: 'Switching to Makeasy 100% cotton pads completely eliminated period rashes for me. The XL+ wings keep my bed linens spotless even on peak flow nights.',
     rating: 5,
-    productName: 'Luna Ultra Night Wings',
-    verifiedPurchase: true,
-    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80'
+    productName: 'Makeasy Classic Care Sanitary Napkins'
   },
   {
     id: 't3',
-    name: 'Maya Patel',
-    role: 'Creative Director',
-    location: 'Austin, TX',
-    comment: 'I love that Luna tells you exactly what goes into their pads. No secret plastics, no synthetic perfume, just 100% organic cotton. The starter box is so convenient.',
+    name: 'Ritu Verma',
+    role: 'Healthcare Consultant',
+    location: 'Bengaluru, India',
+    avatar: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=400&q=80',
+    comment: 'As a medical professional, I appreciate the zero-toxin, unbleached cotton formulation. It gives women total peace of mind and genuine everyday comfort.',
     rating: 5,
-    productName: 'Luna Starter Box',
-    verifiedPurchase: true,
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80'
-  },
-  {
-    id: 't4',
-    name: 'Camila Rodriguez',
-    role: 'New Mom & Graphic Designer',
-    location: 'Miami, FL',
-    comment: 'The Postpartum recovery pads saved me after delivery. So plush, breathable, and soothing. I recommended them to every expecting mom in my circle.',
-    rating: 5,
-    productName: 'Luna Postpartum Max',
-    verifiedPurchase: true,
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80'
-  }
-];
-
-export const PRESS_QUOTES = [
-  {
-    quote: '"Luna is revolutionizing period care with organic luxury, medical-grade safety, and flawless absorbency."',
-    outlet: 'VOGUE WELLNESS',
-  },
-  {
-    quote: '"Finally, a sanitary pad that respects both female anatomy and the planet."',
-    outlet: 'ELLE MAGAZINE',
-  },
-  {
-    quote: '"Top Pick: Best Organic Period Care Brand for Sensitive Skin."',
-    outlet: 'HEALTH & WOMEN',
+    productName: 'Makeasy Complete Hygiene Box'
   }
 ];

@@ -2,285 +2,178 @@ import { Product } from '../types';
 
 export const PRODUCTS: Product[] = [
   {
-    id: 'luna-daily-organic',
-    name: 'Luna Daily Organic',
-    tagline: 'Ultra-thin regular pads for everyday flow and lightweight comfort.',
+    id: 'makeasy-classic-care-napkin',
+    name: 'Makeasy Classic Care Sanitary Napkin',
+    tagline: '100% Cotton Stay Soft XL+ 7 Pads with 3D Leaklock Barrier.',
     category: 'regular',
-    categoryLabel: 'Regular Flow',
-    rating: 4.9,
-    reviewCount: 324,
-    flowLevel: 2,
-    flowLabel: 'Regular Flow (240mm)',
-    description: 'Engineered with a 100% organic cotton top sheet and a super-absorbent core that locks in fluid in seconds without bulk.',
-    longDescription: 'Luna Daily Organic pads provide invisible protection for moderate flow days. Crafted with 100% GOTS-certified organic Texas cotton, our wing design stays firmly in place whether you are working out or lounging at home. Hypoallergenic, chlorine-free, and 100% biodegradable core.',
-    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80',
-    secondaryImage: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=800&q=80',
+    categoryLabel: 'Sanitary Napkins',
+    rating: 4.95,
+    reviewCount: 428,
+    flowLevel: 3,
+    flowLabel: 'Regular to Heavy Flow (XL+ 280mm)',
+    description: 'Engineered with 100% pure cotton cover sheet and rapid-gel core that locks in wetness instantaneously with zero leakage.',
+    longDescription: 'Makeasy Classic Care Sanitary Napkins provide reliable, rush-free absorbency. Crafted with 100% cotton top sheet and flexing wings, our design stays firmly in place whether you are working, travelling, or relaxing at home. Hypoallergenic, rash-free, and 100% breathable.',
+    image: '/images/card-sanitary-napkin.png',
+    secondaryImage: '/images/hero-product.png',
     gallery: [
+      '/images/card-sanitary-napkin.png',
+      '/images/hero-product.png',
       'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=800&q=80'
     ],
     features: [
-      '100% GOTS-Certified Organic Cotton Top Sheet',
-      'LeakLock™ 3D Side Barriers to Prevent Edge Leakage',
-      'Ultra-thin 2mm Profile for Maximum Discretion',
-      'Chlorine-Free & Fragrance-Free Guarantee',
-      'Flexible Ergonomic Wings'
+      '100% Pure Cotton Soft Top Sheet',
+      '3D Leak Barrier to Prevent Edge Leakage',
+      'Ultra-thin Profile for Maximum Comfort',
+      'Zero Rash & Fragrance-Free Guarantee',
+      'Flexible Ergonomic Double Wings'
     ],
-    materials: ['Organic Cotton Top Sheet', 'Sustainable Elemental Chlorine-Free Wood Pulp', 'Bio-Based Leakproof Backsheet', 'Non-Toxic Food-Grade Adhesive'],
+    materials: ['100% Pure Cotton Top Layer', 'Super Absorbent Polymer (SAP) Core', 'Breathable Leakproof Backsheet', 'Medical-Grade Safe Adhesive'],
     isOrganic: true,
     isBestseller: true,
     variants: [
-      { id: 'v1', name: 'Pack of 10 Pads', count: 10 },
-      { id: 'v2', name: 'Box of 24 Pads', count: 24 },
-      { id: 'v3', name: 'Bundle 3-Pack (30 Pads)', count: 30 }
+      { id: 'v1', name: 'Pack of 7 XL+ Pads', count: 7 },
+      { id: 'v2', name: 'Box of 20 XL+ Pads', count: 20 },
+      { id: 'v3', name: 'Value Bundle 3-Pack (30 Pads)', count: 30 }
     ],
-    absorbencyNotes: 'Holds up to 40ml of liquid. Suitable for days 2 to 5.',
-    dimensions: 'Length: 240mm | Thickness: 2mm | Width: 70mm'
+    absorbencyNotes: 'Holds up to 50ml of liquid. Suitable for days 1 to 5.',
+    dimensions: 'Length: 280mm | Width: 75mm | XL+ Extra Coverage'
   },
   {
-    id: 'luna-ultra-night',
-    name: 'Luna Ultra Night Wings',
-    tagline: 'Extra long 330mm overnight protection for 12 hours of worry-free sleep.',
+    id: 'makeasy-ha-pee-device',
+    name: 'Makeasy HaPee Urination Device (PeeDevice)',
+    tagline: 'Revolutionary disposable female urination device that allows women to stand and pee safely.',
+    category: 'pee-device',
+    categoryLabel: 'PeeDevice (Female Urination)',
+    rating: 4.98,
+    reviewCount: 654,
+    flowLevel: 1,
+    flowLabel: 'Hygiene & Travel Companion',
+    description: 'An innovative, ergonomic disposable device that lets women stand and pee safely in unhygienic public restrooms, preventing UTIs.',
+    longDescription: 'No more crouching or touching dirty toilet seats! Makeasy HaPee Urination Device is made from coated water-resistant, biodegradable paperboard. Ideal for travelling, highway car trips, railway stations, airports, outdoor camping, festivals, and pregnancy.',
+    image: '/images/card-pee-device.png',
+    secondaryImage: '/images/ha-pee-box.png',
+    gallery: [
+      '/images/card-pee-device.png',
+      '/images/ha-pee-box.png',
+      '/images/uti-woman.jpg'
+    ],
+    features: [
+      'Ergonomic Splash-Proof Funnel Design',
+      'Prevents UTI & Public Toilet Infections',
+      '100% Waterproof Biodegradable Coated Board',
+      'Compact & Pocket-Friendly Packaging',
+      'Single-Use Hygienic Throw-Away Design'
+    ],
+    materials: ['Waterproof Coated Recyclable Paperboard', 'Eco-Friendly Inks'],
+    isOrganic: true,
+    isBestseller: true,
+    isNew: true,
+    variants: [
+      { id: 'v1', name: 'Pack of 5 PeeDevices', count: 5 },
+      { id: 'v2', name: 'Travel Box of 10 PeeDevices', count: 10 },
+      { id: 'v3', name: 'Explorer Pack of 20 PeeDevices', count: 20 }
+    ],
+    absorbencyNotes: 'Immediate directional flow. 100% leak-proof spill guard.',
+    dimensions: 'Pocket Size: 15cm x 6cm | Lightweight (10g)'
+  },
+  {
+    id: 'makeasy-ultra-night-wings',
+    name: 'Makeasy Ultra Night Wings Pads',
+    tagline: 'Extra long 330mm overnight protection for 12 hours of leak-free sleep.',
     category: 'overnight',
-    categoryLabel: 'Overnight Flow',
-    rating: 4.95,
-    reviewCount: 488,
+    categoryLabel: 'Overnight Care',
+    rating: 4.92,
+    reviewCount: 388,
     flowLevel: 5,
     flowLabel: 'Super Heavy Overnight (330mm)',
-    description: 'Extra-wide flared back design offers complete 360° coverage for side and back sleepers during heavy night flows.',
-    longDescription: 'Sleep peacefully without worrying about leaks. Luna Ultra Night Wings combines a 40% wider flared tail with dual micro-channels that trap liquid instantaneously. Gentle against sensitive skin with zero harsh chemicals.',
+    description: 'Extra-wide flared back tail offers complete 360° coverage for side and back sleepers during heavy night flows.',
+    longDescription: 'Sleep peacefully without worrying about leaks. Makeasy Ultra Night Wings combines a 40% wider flared tail with double flexing wings that trap liquid instantaneously.',
     image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80',
-    secondaryImage: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80',
+    secondaryImage: '/images/hero-product.png',
     gallery: [
       'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80'
+      '/images/card-sanitary-napkin.png'
     ],
     features: [
-      'Extended 330mm Length for Full Coverage',
+      'Extended 330mm Length for Full Back Coverage',
       'Flared Back Tail Protects Bed Linens',
       '12-Hour Continuous Leak Guard',
-      'Double Flexing Secure Wings',
-      'Velvety Organic Soft Touch'
+      'Double Flexing Secure Wings'
     ],
-    materials: ['Organic Cotton Top Sheet', 'Super Absorbent Polymer (SAP) Core', 'Breathable Non-Woven Polyethylene', 'Medical-Grade Safe Adhesive'],
+    materials: ['100% Cotton Top Sheet', 'SAP Micro-gel Core', 'Breathable Non-Woven Backsheet'],
     isOrganic: true,
-    isBestseller: true,
     variants: [
       { id: 'v1', name: 'Pack of 8 Night Pads', count: 8 },
-      { id: 'v2', name: 'Box of 20 Night Pads', count: 20 },
-      { id: 'v3', name: 'Night Owl 3-Pack (24 Pads)', count: 24 }
+      { id: 'v2', name: 'Box of 20 Night Pads', count: 20 }
     ],
     absorbencyNotes: 'Holds up to 80ml of liquid. Ideal for heavy overnight flow.',
-    dimensions: 'Length: 330mm | Thickness: 3mm | Flared Tail Width: 120mm'
+    dimensions: 'Length: 330mm | Flared Tail Width: 120mm'
   },
   {
-    id: 'luna-heavy-flow-max',
-    name: 'Luna Heavy Flow Max',
-    tagline: 'High-absorbency day pads for peak flow days and active movement.',
-    category: 'heavy',
-    categoryLabel: 'Heavy Flow',
-    rating: 4.85,
-    reviewCount: 215,
-    flowLevel: 4,
-    flowLabel: 'Heavy Day Flow (280mm)',
-    description: 'Designed specifically for Day 1 and Day 2 peak flow with reinforced core micro-tubes that pull wetness away from your skin.',
-    longDescription: 'Feel completely secure even on your heaviest days. Luna Heavy Flow Max features quick-wicking technology that instantly converts liquid into gel, keeping your surface completely dry and fresh for hours.',
-    image: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=800&q=80',
-    secondaryImage: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80'
-    ],
-    features: [
-      '280mm High-Capacity Contour Shape',
-      'RapidDry Gel Technology',
-      'Soft Wings Prevent Side Friction',
-      'Breathable Lower Membrane Keeps Skin Cool',
-      'Zero Synthetic Fragrance or Dyes'
-    ],
-    materials: ['GOTS Certified Organic Cotton', 'Plant-Derived Absorbent Core', 'Micro-porous Air Flow Sheet'],
-    isOrganic: true,
-    variants: [
-      { id: 'v1', name: 'Pack of 10 Heavy Pads', count: 10 },
-      { id: 'v2', name: 'Box of 24 Heavy Pads', count: 24 }
-    ],
-    absorbencyNotes: 'Holds up to 60ml of liquid. Perfect for heavy daytime flow.',
-    dimensions: 'Length: 280mm | Thickness: 2.5mm | Width: 75mm'
-  },
-  {
-    id: 'luna-bamboo-liners',
-    name: 'Luna Air-Touch Liners',
-    tagline: 'Featherlight daily liners for pre/post-period freshness and daily discharge.',
+    id: 'makeasy-air-touch-liners',
+    name: 'Makeasy Air-Touch Daily Liners',
+    tagline: 'Featherlight daily liners for pre/post-period freshness and discharge.',
     category: 'liners',
     categoryLabel: 'Panty Liners',
     rating: 4.88,
     reviewCount: 192,
     flowLevel: 1,
     flowLabel: 'Featherlight (155mm)',
-    description: 'Ultra-thin, breathable organic liners so light you will forget you are wearing them.',
-    longDescription: 'Designed for everyday confidence, ovulation discharge, or light spotting. Our Air-Touch Liners feature a micro-perforated cotton sheet that allows your skin to breathe naturally, eliminating odor-causing moisture.',
+    description: 'Ultra-thin, breathable cotton liners so light you will forget you are wearing them.',
+    longDescription: 'Designed for everyday confidence, ovulation discharge, or light spotting. Air-Touch Liners feature a micro-perforated cotton sheet that allows your skin to breathe naturally.',
     image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80',
-    secondaryImage: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80',
+    secondaryImage: '/images/card-sanitary-napkin.png',
     gallery: [
-      'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80'
     ],
     features: [
       '1mm Ultra-Flexible Contour fit',
       'Individually Paper-Wrapped for On-the-Go',
-      'Hypoallergenic Dermatologist Approved',
-      'Breathable Air-Permeable Backing',
-      'Fits All Underwear Styles'
+      'Hypoallergenic Dermatologist Approved'
     ],
-    materials: ['100% Organic Cotton Cover Sheet', 'Air-Laid Paper Core', 'Food-Grade Adhesive'],
+    materials: ['100% Cotton Cover Sheet', 'Air-Laid Paper Core'],
     isOrganic: true,
     variants: [
       { id: 'v1', name: 'Box of 24 Liners', count: 24 },
       { id: 'v2', name: 'Value Box of 50 Liners', count: 50 }
     ],
-    absorbencyNotes: 'Holds up to 15ml of liquid. Ideal for daily freshness.',
-    dimensions: 'Length: 155mm | Thickness: 1mm | Width: 60mm'
+    absorbencyNotes: 'Holds up to 15ml of liquid.',
+    dimensions: 'Length: 155mm | Thickness: 1mm'
   },
   {
-    id: 'luna-starter-kit',
-    name: 'Luna First Period & Cycle Starter Box',
-    tagline: 'Complete care curated box featuring Day, Night, Heavy Pads & Organic Liners.',
+    id: 'makeasy-complete-hygiene-box',
+    name: 'Makeasy Complete Hygiene & Cycle Box',
+    tagline: 'Curated box featuring Sanitary Napkins, HaPee PeeDevices & Air-Touch Liners.',
     category: 'starter-kits',
-    categoryLabel: 'Starter Kits',
-    rating: 4.98,
+    categoryLabel: 'Hygiene Kits',
+    rating: 4.99,
     reviewCount: 512,
     flowLevel: 3,
-    flowLabel: 'All-Flow Combination Box',
-    description: 'The ultimate cycle companion box containing everything you need for your entire monthly period.',
-    longDescription: 'Take the guesswork out of period care. Our Starter Box contains 10 Daily Organic Pads, 8 Heavy Flow Max Pads, 6 Ultra Night Wings, and 12 Air-Touch Liners, plus a waterproof travel pouch and a bonus soothing heat patch sample.',
-    image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80',
-    secondaryImage: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80',
+    flowLabel: 'Complete Hygiene Kit',
+    description: 'The ultimate hygiene box containing everything a woman needs for monthly period care and travel toilet safety.',
+    longDescription: 'Everything you need in one box. Contains 14 Makeasy Classic Cotton Pads, 10 HaPee Female Urination Devices, 10 Air-Touch Liners, plus a travel hygiene pouch.',
+    image: '/images/card-sanitary-napkin.png',
+    secondaryImage: '/images/card-pee-device.png',
     gallery: [
-      'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80'
+      '/images/card-sanitary-napkin.png',
+      '/images/card-pee-device.png',
+      '/images/mother-daughter.png'
     ],
     features: [
-      '36 Total Organic Period Care Items',
-      'Includes Canvas Organic Storage Pouch',
-      'Free Herbal Heating Patch Included',
-      'Educational Cycle Tracker & Guide Included'
+      '34 Total Hygiene & Care Items',
+      'Includes Waterproof Travel Pouch',
+      'Free Educational UTI Prevention Guide'
     ],
-    materials: ['Assorted Organic Cotton Pads & Liners', 'Organic Canvas Storage Pouch'],
+    materials: ['100% Cotton Pads', 'Coated Paperboard PeeDevices', 'Canvas Pouch'],
     isOrganic: true,
     isBestseller: true,
     isNew: true,
     variants: [
-      { id: 'v1', name: '1 Month Starter Kit Box', count: 36 },
-      { id: 'v2', name: '3 Months Supply Box', count: 108 }
+      { id: 'v1', name: '1 Month Hygiene Box', count: 34 },
+      { id: 'v2', name: '3 Months Hygiene Supply', count: 102 }
     ],
-    absorbencyNotes: 'Covers light, medium, heavy daytime and overnight flow.',
-    dimensions: 'Full Cycle Box (36 Items)'
-  },
-  {
-    id: 'luna-active-flex',
-    name: 'Luna Active-Flex Sports Pads',
-    tagline: '3D motion-adaptive pads designed for workout, yoga, and active lifestyles.',
-    category: 'regular',
-    categoryLabel: 'Regular Flow',
-    rating: 4.89,
-    reviewCount: 178,
-    flowLevel: 3,
-    flowLabel: 'Active Medium Flow (260mm)',
-    description: 'Stays 100% in place during high-impact movement with dynamic memory-channel grooves.',
-    longDescription: 'Don’t let your period slow you down. Luna Active-Flex features dynamic wing grips and micro-grooves that flex with your body posture during running, Pilates, cycling, or gym sessions.',
-    image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80',
-    secondaryImage: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=800&q=80'
-    ],
-    features: [
-      'Flexi-Fit Memory Channel Grooves',
-      'Anti-Bunching Structural Core',
-      'Sweat-Wicking Breathable Border',
-      'Ultra Grip Multi-Tab Wings',
-      'Friction-Free Organic Surface'
-    ],
-    materials: ['Organic Cotton Layer', 'Flexible Cellulosic Matrix', 'Breathable Active Backing'],
-    isOrganic: true,
-    variants: [
-      { id: 'v1', name: 'Pack of 12 Active Pads', count: 12 },
-      { id: 'v2', name: 'Box of 24 Active Pads', count: 24 }
-    ],
-    absorbencyNotes: 'Holds up to 45ml during intense physical exercise.',
-    dimensions: 'Length: 260mm | Thickness: 2mm | Width: 72mm'
-  },
-  {
-    id: 'luna-charcoal-detox',
-    name: 'Luna Bamboo Charcoal Pure',
-    tagline: 'Natural odor-neutralizing bamboo charcoal infused organic pad.',
-    category: 'heavy',
-    categoryLabel: 'Heavy Flow',
-    rating: 4.91,
-    reviewCount: 142,
-    flowLevel: 4,
-    flowLabel: 'Heavy Flow + Odor Lock (290mm)',
-    description: 'Activated bamboo charcoal core naturally eliminates odor without synthetic perfumes or chemicals.',
-    longDescription: 'Pure freshness from nature. Infused with natural activated bamboo charcoal micro-fibers, this pad traps odors organically while maintaining gentle biocompatibility with intimate skin balance.',
-    image: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80',
-    secondaryImage: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=800&q=80'
-    ],
-    features: [
-      'Activated Bamboo Charcoal Core',
-      '100% Natural Odor Neutralization',
-      'pH-Balanced Surface Layer',
-      'Eco-Friendly Biodegradable Wrapping',
-      'Extra Wide Side Wings'
-    ],
-    materials: ['Organic Cotton Top Sheet', 'Activated Bamboo Charcoal Fibers', 'Plant Pulp Core'],
-    isOrganic: true,
-    isNew: true,
-    variants: [
-      { id: 'v1', name: 'Pack of 10 Charcoal Pads', count: 10 },
-      { id: 'v2', name: 'Box of 20 Charcoal Pads', count: 20 }
-    ],
-    absorbencyNotes: 'Holds up to 65ml. Superior natural odor lock.',
-    dimensions: 'Length: 290mm | Thickness: 2.5mm | Width: 75mm'
-  },
-  {
-    id: 'luna-postpartum-max',
-    name: 'Luna Postpartum & Maternity Care',
-    tagline: 'Extra gentle, maximum capacity cushion pads for postpartum & recovery care.',
-    category: 'overnight',
-    categoryLabel: 'Maternity & Postpartum',
-    rating: 4.97,
-    reviewCount: 310,
-    flowLevel: 5,
-    flowLabel: 'Maternity Super Heavy (360mm)',
-    description: 'Cloud-soft plush organic cotton top layer designed for post-birth recovery and maximum comfort.',
-    longDescription: 'Created in collaboration with midwives and gynecologists, Luna Postpartum pads offer gentle, cloud-soft cushioning with a 360mm ultra-absorbent core that protects tender tissue without causing chafing or friction.',
-    image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80',
-    secondaryImage: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80'
-    ],
-    features: [
-      'Ultra Soft Pillow-Touch Surface',
-      '360mm Extended Postpartum Coverage',
-      'Gynecologist Approved for Sensitive Recovery',
-      'Non-Irritating Organic Weave',
-      'Holds 100ml+ Liquid Volume'
-    ],
-    materials: ['Unbleached Organic Cotton Cushion', 'Absorbent Cellulosic Core', 'Bio-Membrane Guard'],
-    isOrganic: true,
-    variants: [
-      { id: 'v1', name: 'Pack of 10 Postpartum Pads', count: 10 },
-      { id: 'v2', name: 'Box of 20 Postpartum Pads', count: 20 }
-    ],
-    absorbencyNotes: 'Holds over 100ml liquid capacity. Ideal for postpartum weeks 1 to 4.',
-    dimensions: 'Length: 360mm | Cushion Thickness: 4mm | Flared Back: 140mm'
+    absorbencyNotes: 'Covers light, medium, heavy daytime, overnight, and travel hygiene.',
+    dimensions: 'Full Hygiene Box (34 Items)'
   }
 ];

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useCart } from '../../context/CartContext';
 import { PageView } from '../../types';
-import { ChevronDown, Menu, X, Search } from 'lucide-react';
+import { ChevronDown, Menu } from 'lucide-react';
 import { MobileMenu } from './MobileMenu';
 
 export const Navbar: React.FC = () => {
-  const { currentView, setCurrentView, searchQuery, setSearchQuery } = useCart();
+  const { currentView, setCurrentView } = useCart();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
@@ -47,7 +47,7 @@ export const Navbar: React.FC = () => {
               Makeasy
             </span>
             <span className="text-[10px] uppercase font-montserrat tracking-widest text-pink-200 border border-white/30 rounded-full px-2 py-0.5 ml-1 hidden sm:inline-block">
-              LUNA Care
+              Hygiene & Care
             </span>
           </button>
 
@@ -91,7 +91,7 @@ export const Navbar: React.FC = () => {
               {isProductsDropdownOpen && (
                 <div
                   onMouseLeave={() => setIsProductsDropdownOpen(false)}
-                  className="absolute top-full left-0 w-52 bg-white text-gray-800 rounded-2xl shadow-2xl py-3 border border-purple-100 animate-slide-down"
+                  className="absolute top-full left-0 w-56 bg-white text-gray-800 rounded-2xl shadow-2xl py-3 border border-purple-100 animate-slide-down"
                 >
                   <button
                     onClick={() => handleNavClick('products')}
@@ -109,13 +109,13 @@ export const Navbar: React.FC = () => {
                     onClick={() => handleNavClick('products')}
                     className="w-full text-left px-4 py-2 text-xs font-semibold hover:bg-purple-50 hover:text-brand-magenta transition-colors"
                   >
-                    Overnight Wing Protection
+                    Overnight Protection (330mm)
                   </button>
                   <button
                     onClick={() => handleNavClick('products')}
                     className="w-full text-left px-4 py-2 text-xs font-semibold hover:bg-purple-50 hover:text-brand-magenta transition-colors"
                   >
-                    Starter Cycle Kits
+                    Starter Hygiene Kits
                   </button>
                 </div>
               )}

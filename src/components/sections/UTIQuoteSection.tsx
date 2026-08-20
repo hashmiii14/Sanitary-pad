@@ -2,7 +2,7 @@ import React from 'react';
 import { useCart } from '../../context/CartContext';
 
 export const UTIQuoteSection: React.FC = () => {
-  const { setCurrentView } = useCart();
+  const { openInfoModal } = useCart();
 
   return (
     <section className="py-20 bg-white overflow-hidden relative border-b border-purple-50">
@@ -35,7 +35,7 @@ export const UTIQuoteSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Center Column: Reference Outdoor Woman Lifestyle Photo (matching Reference Image 3) */}
+          {/* Center Column: Outdoor Woman Photo */}
           <div className="lg:col-span-4 relative flex justify-center">
             <div className="w-full max-w-xs rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
               <img
@@ -69,7 +69,7 @@ export const UTIQuoteSection: React.FC = () => {
                 />
 
                 <button
-                  onClick={() => setCurrentView('products')}
+                  onClick={() => openInfoModal('uti-guide')}
                   className="w-full bg-white/10 hover:bg-white text-white hover:text-brand-purple border-2 border-white rounded-full py-2 text-xs sm:text-sm font-semibold transition-all duration-300 shadow-md"
                 >
                   Read More

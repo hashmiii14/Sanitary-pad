@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageView } from '../../types';
-import { X, ChevronRight, Leaf, Shield, Sparkles, MessageSquare } from 'lucide-react';
+import { X, Heart, ShieldCheck } from 'lucide-react';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -8,103 +8,88 @@ interface MobileMenuProps {
   onNavigate: (view: PageView) => void;
 }
 
-export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavigate }) => {
+export const MobileMenu: React.FC<MobileMenuProps> = ({
+  isOpen,
+  onClose,
+  onNavigate,
+}) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-hidden lg:hidden">
+    <div className="fixed inset-0 z-50 lg:hidden flex">
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-plum/40 backdrop-blur-sm transition-opacity animate-fade-in"
+        className="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity animate-fade-in"
         onClick={onClose}
       />
 
-      {/* Drawer */}
-      <div className="fixed inset-y-0 left-0 max-w-xs w-full bg-cream shadow-editorial flex flex-col justify-between animate-slide-up">
-        {/* Top Header */}
-        <div className="p-5 border-b border-blush-deep flex items-center justify-between">
-          <div>
-            <span className="font-serif text-2xl font-bold tracking-widest text-plum block">
-              LUNA
-            </span>
-            <span className="text-[9px] tracking-[0.2em] font-sans text-charcoal-muted uppercase">
-              Period Care
-            </span>
+      {/* Drawer panel right */}
+      <div className="relative ml-auto w-full max-w-xs bg-[#2A0548] text-white h-full shadow-2xl p-6 flex flex-col justify-between z-10 animate-slide-left border-l border-purple-900">
+        <div>
+          {/* Header */}
+          <div className="flex items-center justify-between pb-6 border-b border-purple-800">
+            <span className="font-script text-3xl text-white">Makeasy</span>
+            <button
+              onClick={onClose}
+              className="p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
           </div>
-          <button
-            onClick={onClose}
-            className="p-2 rounded-full text-plum hover:bg-blush transition-colors"
-            aria-label="Close menu"
-          >
-            <X className="w-5 h-5" />
-          </button>
-        </div>
 
-        {/* Navigation Items */}
-        <div className="p-6 space-y-6 overflow-y-auto flex-1">
-          <div className="space-y-2">
-            <p className="text-xs font-bold tracking-wider text-charcoal-muted uppercase mb-3">
-              Menu
-            </p>
+          {/* Nav links list */}
+          <nav className="mt-8 space-y-4 font-semibold text-sm">
             <button
               onClick={() => onNavigate('home')}
-              className="w-full py-3 px-4 rounded-xl text-left font-serif text-lg font-semibold text-charcoal hover:bg-blush flex items-center justify-between transition-colors"
+              className="w-full text-left py-2 px-3 rounded-xl hover:bg-white/10 transition-colors"
             >
-              <span>Home</span>
-              <ChevronRight className="w-4 h-4 text-rose" />
-            </button>
-            <button
-              onClick={() => onNavigate('products')}
-              className="w-full py-3 px-4 rounded-xl text-left font-serif text-lg font-semibold text-charcoal hover:bg-blush flex items-center justify-between transition-colors"
-            >
-              <span>Our Collection</span>
-              <ChevronRight className="w-4 h-4 text-rose" />
+              Home
             </button>
             <button
               onClick={() => onNavigate('about')}
-              className="w-full py-3 px-4 rounded-xl text-left font-serif text-lg font-semibold text-charcoal hover:bg-blush flex items-center justify-between transition-colors"
+              className="w-full text-left py-2 px-3 rounded-xl hover:bg-white/10 transition-colors"
             >
-              <span>Our Story & Mission</span>
-              <ChevronRight className="w-4 h-4 text-rose" />
+              About Us
+            </button>
+            <button
+              onClick={() => onNavigate('products')}
+              className="w-full text-left py-2 px-3 rounded-xl hover:bg-white/10 transition-colors"
+            >
+              Our Products
+            </button>
+            <button
+              onClick={() => onNavigate('products')}
+              className="w-full text-left py-2 px-3 rounded-xl hover:bg-white/10 transition-colors"
+            >
+              Events
+            </button>
+            <button
+              onClick={() => onNavigate('home')}
+              className="w-full text-left py-2 px-3 rounded-xl hover:bg-white/10 transition-colors"
+            >
+              Survey
             </button>
             <button
               onClick={() => onNavigate('contact')}
-              className="w-full py-3 px-4 rounded-xl text-left font-serif text-lg font-semibold text-charcoal hover:bg-blush flex items-center justify-between transition-colors"
+              className="w-full text-left py-2 px-3 rounded-xl hover:bg-white/10 transition-colors"
             >
-              <span>Contact Us</span>
-              <ChevronRight className="w-4 h-4 text-rose" />
+              Contact Us
             </button>
-          </div>
-
-          {/* Quick Badges */}
-          <div className="p-4 rounded-2xl bg-blush-soft border border-blush-deep space-y-3">
-            <div className="flex items-center gap-2.5 text-xs text-plum font-medium">
-              <Leaf className="w-4 h-4 text-sage-dark" />
-              <span>100% GOTS Organic Cotton</span>
-            </div>
-            <div className="flex items-center gap-2.5 text-xs text-plum font-medium">
-              <Shield className="w-4 h-4 text-rose" />
-              <span>Hypoallergenic & Toxic Free</span>
-            </div>
-            <div className="flex items-center gap-2.5 text-xs text-plum font-medium">
-              <Sparkles className="w-4 h-4 text-amber-500" />
-              <span>Dermatologist Approved</span>
-            </div>
-          </div>
+          </nav>
         </div>
 
-        {/* Footer Actions */}
-        <div className="p-6 border-t border-blush-deep space-y-3 bg-blush/30">
+        {/* Footer */}
+        <div className="pt-6 border-t border-purple-800 space-y-4">
           <button
-            onClick={() => {
-              onClose();
-              onNavigate('contact');
-            }}
-            className="w-full py-3 px-4 rounded-full bg-plum text-cream hover:bg-plum-dark font-medium text-sm flex items-center justify-center gap-2 shadow-sm"
+            onClick={() => onNavigate('products')}
+            className="w-full bg-gradient-to-r from-pink-600 to-purple-700 text-white rounded-full py-3 text-xs font-bold shadow-lg"
           >
-            <MessageSquare className="w-4 h-4 text-rose-light" />
-            <span>Inquire About Luna</span>
+            Buy Now
           </button>
+          <div className="flex items-center gap-2 text-[11px] text-purple-300 font-light justify-center">
+            <ShieldCheck className="w-4 h-4 text-pink-400" />
+            <span>100% Cotton & UTI Prevention</span>
+          </div>
         </div>
       </div>
     </div>

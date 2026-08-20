@@ -12,6 +12,10 @@ interface ProductContextType {
   
   quickViewProduct: Product | null;
   setQuickViewProduct: (product: Product | null) => void;
+
+  activeInfoModal: string | null;
+  openInfoModal: (key: string) => void;
+  closeInfoModal: () => void;
   
   searchQuery: string;
   setSearchQuery: (query: string) => void;
@@ -23,6 +27,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [currentView, setCurrentView] = useState<PageView>('home');
   const [selectedProduct, setSelectedProduct] = useState<Product>(PRODUCTS[0]);
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
+  const [activeInfoModal, setActiveInfoModal] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>('');
 
   useEffect(() => {
@@ -32,6 +37,14 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const navigateToProduct = (product: Product) => {
     setSelectedProduct(product);
     setCurrentView('product-detail');
+  };
+
+  const openInfoModal = (key: string) => {
+    setActiveInfoModal(key);
+  };
+
+  const closeInfoModal = () => {
+    setActiveInfoModal(null);
   };
 
   return (
@@ -44,6 +57,9 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
         navigateToProduct,
         quickViewProduct,
         setQuickViewProduct,
+        activeInfoModal,
+        openInfoModal,
+        closeInfoModal,
         searchQuery,
         setSearchQuery,
       }}

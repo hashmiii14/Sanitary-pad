@@ -146,7 +146,7 @@ export const CartDrawer: React.FC = () => {
                 <form onSubmit={handlePromoSubmit} className="flex gap-2">
                   <input
                     type="text"
-                    placeholder="Discount code (e.g. LUNA10)"
+                    placeholder="Discount code (e.g. MAKEASY10)"
                     value={promoInput}
                     onChange={(e) => {
                       setPromoInput(e.target.value);

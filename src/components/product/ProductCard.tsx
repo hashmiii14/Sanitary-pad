@@ -3,8 +3,7 @@ import { Product } from '../../types';
 import { useCart } from '../../context/CartContext';
 import { FlowBadge, OrganicBadge, BestsellerBadge, NewBadge } from '../ui/Badge';
 import { RatingStars } from '../ui/RatingStars';
-import { Button } from '../ui/Button';
-import { Eye, ArrowRight, Sparkles } from 'lucide-react';
+import { Eye, ArrowRight } from 'lucide-react';
 
 interface ProductCardProps {
   product: Product;
@@ -16,19 +15,19 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
   return (
     <div
-      className="group bg-white rounded-3xl border border-blush-deep/60 p-4 transition-all duration-300 hover:shadow-editorial hover:-translate-y-1 flex flex-col justify-between relative"
+      className="group bg-white rounded-3xl border border-purple-100 p-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between relative"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Top Media Image Container */}
       <div
-        className="relative w-full aspect-square rounded-2xl overflow-hidden bg-blush-soft cursor-pointer mb-4"
+        className="relative w-full aspect-square rounded-2xl overflow-hidden bg-[#F6F0FA] cursor-pointer mb-4 flex items-center justify-center p-3"
         onClick={() => navigateToProduct(product)}
       >
         <img
           src={isHovered && product.secondaryImage ? product.secondaryImage : product.image}
           alt={product.name}
-          className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+          className="w-full h-full object-contain object-center transition-transform duration-500 ease-out group-hover:scale-105"
           loading="lazy"
         />
 
@@ -46,15 +45,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               e.stopPropagation();
               setQuickViewProduct(product);
             }}
-            className="w-full py-2 bg-cream/95 backdrop-blur-md text-plum rounded-xl font-medium text-xs shadow-soft hover:bg-cream flex items-center justify-center gap-1.5 transition-all"
+            className="w-full py-2 bg-white/95 backdrop-blur-md text-brand-purple rounded-xl font-bold text-xs shadow-md hover:bg-brand-purple hover:text-white flex items-center justify-center gap-1.5 transition-all"
           >
-            <Eye className="w-3.5 h-3.5 text-rose" /> Quick Overview
+            <Eye className="w-3.5 h-3.5" /> Quick Overview
           </button>
         </div>
       </div>
 
       {/* Product Content Details */}
-      <div className="space-y-2 flex-1 flex flex-col justify-between">
+      <div className="space-y-3 flex-1 flex flex-col justify-between">
         <div>
           {/* Flow Absorbency Badge */}
           <div className="mb-2">
@@ -64,13 +63,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           {/* Product Name */}
           <h3
             onClick={() => navigateToProduct(product)}
-            className="font-serif text-lg font-bold text-charcoal group-hover:text-rose transition-colors cursor-pointer line-clamp-1"
+            className="text-lg font-bold text-gray-900 group-hover:text-brand-magenta transition-colors cursor-pointer line-clamp-1"
           >
             {product.name}
           </h3>
 
           {/* Tagline */}
-          <p className="text-xs text-charcoal-muted line-clamp-2 mt-1 leading-relaxed">
+          <p className="text-xs text-gray-600 line-clamp-2 mt-1 leading-relaxed font-light">
             {product.tagline}
           </p>
 
@@ -81,23 +80,21 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </div>
 
         {/* Specifications & CTA */}
-        <div className="pt-3 border-t border-blush-soft space-y-3 mt-2">
+        <div className="pt-3 border-t border-purple-100 space-y-3 mt-2">
           {/* Specs note */}
-          <div className="text-[11px] text-charcoal-muted flex justify-between">
-            <span>Length: <strong>{product.dimensions.split('|')[0].replace('Length:', '').trim()}</strong></span>
-            <span className="text-sage-dark font-semibold">GOTS Cotton</span>
+          <div className="text-[11px] text-gray-500 flex justify-between">
+            <span>Dimensions: <strong>{product.dimensions.split('|')[0].replace('Length:', '').trim()}</strong></span>
+            <span className="text-brand-crimson font-semibold">100% Cotton</span>
           </div>
 
           {/* Action Button */}
-          <Button
-            size="sm"
-            variant="outline"
+          <button
             onClick={() => navigateToProduct(product)}
-            className="w-full justify-between"
-            rightIcon={<ArrowRight className="w-3.5 h-3.5" />}
+            className="w-full bg-purple-50 hover:bg-[#6B1186] text-brand-purple hover:text-white border border-purple-200 rounded-full py-2 px-4 text-xs font-semibold flex items-center justify-between transition-all duration-300"
           >
-            Explore Specifications
-          </Button>
+            <span>View Specifications</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </button>
         </div>
       </div>
     </div>

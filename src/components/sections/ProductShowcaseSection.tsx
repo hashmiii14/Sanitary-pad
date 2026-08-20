@@ -3,7 +3,7 @@ import { useCart } from '../../context/CartContext';
 import { ChevronRight } from 'lucide-react';
 
 export const ProductShowcaseSection: React.FC = () => {
-  const { setCurrentView } = useCart();
+  const { openInfoModal } = useCart();
 
   return (
     <section className="py-20 bg-[#F6F0FA] relative overflow-hidden">
@@ -31,12 +31,11 @@ export const ProductShowcaseSection: React.FC = () => {
           </h2>
         </div>
 
-        {/* 2-Column Wide Product Cards with Exact Reference Images (matching Reference Image 2) */}
+        {/* 2-Column Wide Product Cards with Reference Images (matching Reference Image 2) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Card 1: PeeDevice */}
           <div className="bg-white rounded-3xl p-8 shadow-xl border border-purple-100 flex flex-col justify-between transform hover:-translate-y-2 transition-all duration-300 group">
             <div className="space-y-6">
-              {/* Reference Product Card Image */}
               <div className="rounded-2xl overflow-hidden flex items-center justify-center p-2">
                 <img
                   src="/images/card-pee-device.png"
@@ -57,7 +56,7 @@ export const ProductShowcaseSection: React.FC = () => {
 
             <div className="pt-6">
               <button
-                onClick={() => setCurrentView('products')}
+                onClick={() => openInfoModal('pee-device')}
                 className="inline-flex items-center gap-1 text-xs font-bold text-brand-crimson hover:text-brand-purple transition-colors uppercase tracking-wider"
               >
                 <span>Read More</span>
@@ -69,7 +68,6 @@ export const ProductShowcaseSection: React.FC = () => {
           {/* Card 2: Sanitary Napkin */}
           <div className="bg-white rounded-3xl p-8 shadow-xl border border-purple-100 flex flex-col justify-between transform hover:-translate-y-2 transition-all duration-300 group">
             <div className="space-y-6">
-              {/* Reference Product Card Image */}
               <div className="rounded-2xl overflow-hidden flex items-center justify-center p-2">
                 <img
                   src="/images/card-sanitary-napkin.png"
@@ -90,7 +88,7 @@ export const ProductShowcaseSection: React.FC = () => {
 
             <div className="pt-6">
               <button
-                onClick={() => setCurrentView('products')}
+                onClick={() => openInfoModal('sanitary-napkins')}
                 className="inline-flex items-center gap-1 text-xs font-bold text-brand-crimson hover:text-brand-purple transition-colors uppercase tracking-wider"
               >
                 <span>Read More</span>

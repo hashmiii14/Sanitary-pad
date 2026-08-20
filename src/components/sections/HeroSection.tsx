@@ -3,7 +3,7 @@ import { useCart } from '../../context/CartContext';
 import { ChevronLeft, ChevronRight, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
-  const { setCurrentView } = useCart();
+  const { setCurrentView, openInfoModal } = useCart();
 
   return (
     <section className="relative bg-gradient-to-r from-[#3A0CA3] via-[#7B1FA2] to-[#E91E63] text-white pt-28 pb-36 lg:pt-36 lg:pb-48 clip-diagonal overflow-hidden shadow-2xl">
@@ -41,12 +41,19 @@ export const HeroSection: React.FC = () => {
               Dedicated to your health and hygiene.
             </p>
 
-            <div className="pt-4">
+            <div className="pt-4 flex flex-wrap gap-4 justify-center lg:justify-start">
               <button
-                onClick={() => setCurrentView('products')}
+                onClick={() => openInfoModal('hero-read-more')}
                 className="bg-transparent hover:bg-white hover:text-brand-purple text-white border-2 border-white rounded-full px-8 py-2.5 text-sm font-semibold transition-all duration-300 shadow-lg transform hover:scale-105 inline-flex items-center gap-2"
               >
                 Read More
+              </button>
+
+              <button
+                onClick={() => setCurrentView('products')}
+                className="bg-white text-brand-purple hover:bg-pink-100 rounded-full px-8 py-2.5 text-sm font-semibold transition-all duration-300 shadow-lg transform hover:scale-105"
+              >
+                Buy Now
               </button>
             </div>
           </div>
