@@ -1,99 +1,109 @@
 import React from 'react';
 import { useCart } from '../../context/CartContext';
-import { Button } from '../ui/Button';
-import { ArrowRight, Leaf, ShieldCheck, Heart } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
   const { setCurrentView } = useCart();
 
   return (
-    <section className="relative bg-[#F6EBE9] pt-12 pb-20 md:py-28 overflow-hidden border-b border-[#E8D7D5]">
-      {/* Editorial Decorative Soft Line Element */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white/30 to-transparent pointer-events-none" />
+    <section className="relative bg-gradient-to-r from-[#3A0CA3] via-[#7B1FA2] to-[#E91E63] text-white pt-28 pb-36 lg:pt-36 lg:pb-48 clip-diagonal overflow-hidden shadow-2xl">
+      {/* Decorative Sparkles Background Effect */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/15 via-transparent to-transparent pointer-events-none" />
+
+      {/* Fixed Vertical Social Bar Right Margin (matching Reference Image 2) */}
+      <div className="hidden xl:flex flex-col items-center gap-4 absolute right-8 top-1/3 z-20">
+        <div className="w-px h-16 bg-white/40" />
+        <a href="#facebook" className="text-white/80 hover:text-white transition-transform hover:scale-125">
+          <Facebook className="w-4 h-4" />
+        </a>
+        <a href="#instagram" className="text-white/80 hover:text-white transition-transform hover:scale-125">
+          <Instagram className="w-4 h-4" />
+        </a>
+        <a href="#linkedin" className="text-white/80 hover:text-white transition-transform hover:scale-125">
+          <Linkedin className="w-4 h-4" />
+        </a>
+        <a href="#twitter" className="text-white/80 hover:text-white transition-transform hover:scale-125">
+          <Twitter className="w-4 h-4" />
+        </a>
+        <div className="w-px h-16 bg-white/40" />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Editorial Text Column Left */}
-          <div className="lg:col-span-6 space-y-8 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 border border-[#E8D7D5] text-xs font-semibold text-plum tracking-wider uppercase">
-              <span className="w-2 h-2 rounded-full bg-rose inline-block" />
-              <span>Thoughtfully Crafted Period Care</span>
-            </div>
-
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-plum tracking-tight leading-[1.1]">
-              Comfort for every <br className="hidden sm:inline" />
-              <span className="italic font-normal text-rose-dark">kind of day.</span>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          {/* Left Column: Typography & Content */}
+          <div className="lg:col-span-6 space-y-6 text-center lg:text-left">
+            <h1 className="font-sans text-4xl sm:text-5xl lg:text-6xl font-light tracking-wide leading-tight text-white">
+              The One That Suits <br />
+              <span className="font-semibold font-serif italic text-pink-100">Your Needs</span>
             </h1>
 
-            <p className="text-base sm:text-lg text-charcoal-muted max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans font-normal">
-              Period care that feels right. Made from 100% GOTS-certified organic Texas cotton—soft, simple, and reassuring protection designed for real bodies.
+            <p className="text-base sm:text-lg text-purple-100/90 font-light tracking-wide max-w-md mx-auto lg:mx-0">
+              Dedicated to your health and hygiene.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-              <Button
-                variant="primary"
-                size="lg"
+            <div className="pt-4">
+              <button
                 onClick={() => setCurrentView('products')}
-                rightIcon={<ArrowRight className="w-4 h-4" />}
-                className="w-full sm:w-auto shadow-sm"
+                className="bg-transparent hover:bg-white hover:text-brand-purple text-white border-2 border-white rounded-full px-8 py-2.5 text-sm font-semibold transition-all duration-300 shadow-lg transform hover:scale-105 inline-flex items-center gap-2"
               >
-                Explore Collection
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={() => setCurrentView('about')}
-                className="w-full sm:w-auto bg-white/50 border-[#D98A7D]"
-              >
-                Our Story
-              </Button>
-            </div>
-
-            {/* Subtle Brand Pillars Bar */}
-            <div className="pt-8 border-t border-[#E5D2D0] grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0 text-left">
-              <div className="space-y-1">
-                <div className="flex items-center gap-1.5 text-xs font-bold text-plum">
-                  <Leaf className="w-3.5 h-3.5 text-sage-dark shrink-0" />
-                  <span>100% Organic</span>
-                </div>
-                <p className="text-[11px] text-charcoal-muted">Texas Organic Cotton</p>
-              </div>
-
-              <div className="space-y-1">
-                <div className="flex items-center gap-1.5 text-xs font-bold text-plum">
-                  <ShieldCheck className="w-3.5 h-3.5 text-rose shrink-0" />
-                  <span>Zero Toxins</span>
-                </div>
-                <p className="text-[11px] text-charcoal-muted">0% Fragrance & Dyes</p>
-              </div>
-
-              <div className="space-y-1">
-                <div className="flex items-center gap-1.5 text-xs font-bold text-plum">
-                  <Heart className="w-3.5 h-3.5 text-rose-dark shrink-0" />
-                  <span>Gentle Touch</span>
-                </div>
-                <p className="text-[11px] text-charcoal-muted">Dermatologist Approved</p>
-              </div>
+                Read More
+              </button>
             </div>
           </div>
 
-          {/* Editorial Visual Column Right */}
-          <div className="lg:col-span-6 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              {/* Large Soft-Framed Photography */}
-              <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-editorial border-4 border-white bg-white">
-                <img
-                  src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80"
-                  alt="Luna Soft Organic Pad Packaging"
-                  className="w-full h-full object-cover object-center"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-plum/20 via-transparent to-transparent pointer-events-none" />
+          {/* Right Column: 3D Product Box + Napkin Render (matching Reference Image 2) */}
+          <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-lg flex items-center justify-center">
+              {/* Purple/Magenta 3D Box Mockup */}
+              <div className="relative z-10 w-72 sm:w-80 aspect-[4/3] rounded-2xl bg-gradient-to-br from-pink-600 via-purple-700 to-purple-900 p-6 shadow-2xl border-2 border-white/20 transform -rotate-2 hover:rotate-0 transition-transform duration-500 group">
+                {/* 100% Cotton Badge Top Right */}
+                <div className="absolute top-4 right-4 bg-emerald-500 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-md">
+                  100% Cotton
+                </div>
+
+                <div className="h-full flex flex-col justify-between">
+                  <div>
+                    <span className="font-script text-3xl text-white block">Makeasy</span>
+                    <span className="text-[10px] tracking-widest text-pink-200 uppercase font-bold block">CLASSIC CARE</span>
+                    <span className="text-[9px] text-emerald-200 font-semibold uppercase block">STAY SOFT</span>
+                  </div>
+
+                  <div className="flex items-end justify-between border-t border-white/20 pt-3">
+                    <span className="text-xs font-bold text-white uppercase tracking-wider">XL+ 7 Pads</span>
+                    <span className="text-[10px] text-pink-100 bg-white/20 px-2 py-0.5 rounded-full">Ultra Thin</span>
+                  </div>
+                </div>
               </div>
 
-              {/* Editorial Caption Tag */}
-              <div className="absolute -bottom-5 right-4 bg-white/95 backdrop-blur-md px-5 py-3 rounded-2xl shadow-soft border border-[#E8D7D5] max-w-xs text-xs text-charcoal">
-                <p className="font-serif italic text-sm font-bold text-plum">"Something softer for everyday days."</p>
+              {/* 3D Unfolded Sanitary Napkin Graphic (Floating Next to Box) */}
+              <div className="absolute right-0 sm:-right-6 bottom-[-20px] z-20 w-44 sm:w-52 aspect-[3/4] bg-white rounded-3xl p-4 shadow-2xl border border-purple-100 flex flex-col items-center justify-center transform rotate-6 hover:rotate-0 transition-transform duration-500 animate-float">
+                <div className="w-full h-full rounded-2xl bg-gradient-to-b from-purple-50 to-pink-50 flex flex-col items-center justify-center p-3 text-center border border-pink-100">
+                  <div className="w-16 h-28 rounded-full border-2 border-dashed border-pink-300 bg-white flex items-center justify-center shadow-inner my-2">
+                    <span className="text-xs font-bold text-pink-600">Soft Touch</span>
+                  </div>
+                  <span className="text-[10px] font-bold text-purple-900 uppercase tracking-widest">3D Leak Barrier</span>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar: Angled Hashtag Overlay (Left) + Slider Pagination (Right) */}
+        <div className="mt-12 lg:mt-16 flex items-center justify-between border-t border-white/10 pt-6">
+          <div className="font-bold text-lg sm:text-xl tracking-wide text-white/90 transform -rotate-1 font-script">
+            #Don'tStopYourself
+          </div>
+
+          <div className="flex items-center gap-3 text-sm font-semibold text-white/90">
+            <span className="font-bold text-base text-pink-200">02</span>
+            <span className="text-xs text-white/60">/ 05</span>
+            <div className="flex items-center gap-1 ml-2">
+              <button className="p-1.5 rounded-full bg-white/10 hover:bg-white/30 text-white transition-colors">
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <button className="p-1.5 rounded-full bg-white/10 hover:bg-white/30 text-white transition-colors">
+                <ChevronRight className="w-4 h-4" />
+              </button>
             </div>
           </div>
         </div>
