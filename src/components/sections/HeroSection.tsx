@@ -1,120 +1,98 @@
 import React from 'react';
 import { useCart } from '../../context/CartContext';
 import { Button } from '../ui/Button';
-import { ArrowRight, Leaf, Shield, Sparkles, Droplets } from 'lucide-react';
+import { ArrowRight, Leaf, ShieldCheck, Heart } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
   const { setCurrentView } = useCart();
 
   return (
-    <section className="relative bg-cream pt-10 pb-16 md:py-20 overflow-hidden border-b border-blush-deep/50">
-      {/* Background Soft Blobs */}
-      <div className="absolute top-1/4 -left-20 w-80 h-80 bg-blush-deep/30 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-0 w-96 h-96 bg-rose-light/40 rounded-full blur-3xl pointer-events-none" />
+    <section className="relative bg-[#F6EBE9] pt-12 pb-20 md:py-28 overflow-hidden border-b border-[#E8D7D5]">
+      {/* Editorial Decorative Soft Line Element */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white/30 to-transparent pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Text Left Column */}
-          <div className="lg:col-span-6 space-y-6 text-center lg:text-left">
-            {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blush-soft border border-rose-light text-xs font-bold text-plum tracking-widest uppercase">
-              <Sparkles className="w-3.5 h-3.5 text-rose" />
-              <span>PERIOD CARE, REIMAGINED</span>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Editorial Text Column Left */}
+          <div className="lg:col-span-6 space-y-8 text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 border border-[#E8D7D5] text-xs font-semibold text-plum tracking-wider uppercase">
+              <span className="w-2 h-2 rounded-full bg-rose inline-block" />
+              <span>Thoughtfully Crafted Period Care</span>
             </div>
 
-            {/* Headline */}
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-plum tracking-tight leading-[1.1]">
-              Comfort that <br className="hidden sm:inline" />
-              <span className="italic font-normal text-rose">moves with you.</span>
+              Comfort for every <br className="hidden sm:inline" />
+              <span className="italic font-normal text-rose-dark">kind of day.</span>
             </h1>
 
-            {/* Supporting Copy */}
-            <p className="text-base sm:text-lg text-charcoal-muted max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
-              Thoughtfully designed period care for confident, comfortable days. 100% GOTS-certified organic cotton with 360° leak protection—zero harsh chemicals, zero plastic feel.
+            <p className="text-base sm:text-lg text-charcoal-muted max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans font-normal">
+              Period care that feels right. Made from 100% GOTS-certified organic Texas cotton—soft, simple, and reassuring protection designed for real bodies.
             </p>
 
-            {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
               <Button
                 variant="primary"
                 size="lg"
                 onClick={() => setCurrentView('products')}
                 rightIcon={<ArrowRight className="w-4 h-4" />}
-                className="w-full sm:w-auto shadow-md"
+                className="w-full sm:w-auto shadow-sm"
               >
-                Explore Our Collection
+                Explore Collection
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 onClick={() => setCurrentView('about')}
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto bg-white/50 border-[#D98A7D]"
               >
-                Explore Our Story
+                Our Story
               </Button>
             </div>
 
-            {/* Feature Highlights Trust Badges */}
-            <div className="pt-8 grid grid-cols-3 gap-4 border-t border-blush-deep/60 max-w-md mx-auto lg:mx-0">
+            {/* Subtle Brand Pillars Bar */}
+            <div className="pt-8 border-t border-[#E5D2D0] grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0 text-left">
               <div className="space-y-1">
                 <div className="flex items-center gap-1.5 text-xs font-bold text-plum">
-                  <Leaf className="w-4 h-4 text-sage-dark shrink-0" />
+                  <Leaf className="w-3.5 h-3.5 text-sage-dark shrink-0" />
                   <span>100% Organic</span>
                 </div>
-                <p className="text-[11px] text-charcoal-muted">GOTS Texas Cotton</p>
+                <p className="text-[11px] text-charcoal-muted">Texas Organic Cotton</p>
               </div>
 
               <div className="space-y-1">
                 <div className="flex items-center gap-1.5 text-xs font-bold text-plum">
-                  <Shield className="w-4 h-4 text-rose shrink-0" />
-                  <span>Hypoallergenic</span>
+                  <ShieldCheck className="w-3.5 h-3.5 text-rose shrink-0" />
+                  <span>Zero Toxins</span>
                 </div>
                 <p className="text-[11px] text-charcoal-muted">0% Fragrance & Dyes</p>
               </div>
 
               <div className="space-y-1">
                 <div className="flex items-center gap-1.5 text-xs font-bold text-plum">
-                  <Droplets className="w-4 h-4 text-plum shrink-0" />
-                  <span>12-Hour Protection</span>
+                  <Heart className="w-3.5 h-3.5 text-rose-dark shrink-0" />
+                  <span>Gentle Touch</span>
                 </div>
-                <p className="text-[11px] text-charcoal-muted">LeakLock™ Tech</p>
+                <p className="text-[11px] text-charcoal-muted">Dermatologist Approved</p>
               </div>
             </div>
           </div>
 
-          {/* Visual Right Column */}
+          {/* Editorial Visual Column Right */}
           <div className="lg:col-span-6 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              {/* Main Visual Image */}
-              <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-editorial border-4 border-white bg-blush-soft">
+              {/* Large Soft-Framed Photography */}
+              <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-editorial border-4 border-white bg-white">
                 <img
                   src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80"
-                  alt="Luna Organic Sanitary Pads Presentation"
-                  className="w-full h-full object-cover"
+                  alt="Luna Soft Organic Pad Packaging"
+                  className="w-full h-full object-cover object-center"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-plum/30 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-plum/20 via-transparent to-transparent pointer-events-none" />
               </div>
 
-              {/* Floating Badge 1 (Top Right) */}
-              <div className="absolute -top-4 -right-4 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-soft border border-blush-deep hidden sm:flex items-center gap-3 animate-slide-down">
-                <div className="w-10 h-10 rounded-full bg-rose-light text-rose flex items-center justify-center font-serif text-lg font-bold">
-                  ★ 4.9
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-plum">Loved by 50,000+ Women</p>
-                  <p className="text-[10px] text-charcoal-muted">Dermatologist Tested</p>
-                </div>
-              </div>
-
-              {/* Floating Badge 2 (Bottom Left) */}
-              <div className="absolute -bottom-6 -left-4 bg-plum text-cream p-4 rounded-2xl shadow-editorial border border-plum-light hidden sm:flex items-center gap-3 animate-slide-up">
-                <div className="w-10 h-10 rounded-full bg-rose/30 text-rose-light flex items-center justify-center">
-                  <Leaf className="w-5 h-5" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-cream">Zero Plastic Touch</p>
-                  <p className="text-[10px] text-cream/70">100% Biodegradable Core</p>
-                </div>
+              {/* Editorial Caption Tag */}
+              <div className="absolute -bottom-5 right-4 bg-white/95 backdrop-blur-md px-5 py-3 rounded-2xl shadow-soft border border-[#E8D7D5] max-w-xs text-xs text-charcoal">
+                <p className="font-serif italic text-sm font-bold text-plum">"Something softer for everyday days."</p>
               </div>
             </div>
           </div>
